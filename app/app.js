@@ -16,6 +16,10 @@ import { ConnectedRouter } from 'connected-react-router';
 import history from 'utils/history';
 import 'sanitize.css/sanitize.css';
 
+// Import Styling Theme
+import { ThemeProvider } from 'styled-components';
+import theme from 'utils/theme';
+
 // Import root app
 import App from 'containers/App';
 
@@ -33,6 +37,16 @@ import configureStore from './configureStore';
 // Import i18n messages
 import { translationMessages } from './i18n';
 
+// Observe loading of Open Sans (to remove open sans, remove the <link> tag in
+// the index.html file and this observer)
+const FontFaceObserver = require('fontfaceobserver');
+const ibmPlexSansObserver = new FontFaceObserver('IBM Plex Sans', {});
+
+// When Open Sans is loaded, add a font-family using Open Sans to the body
+ibmPlexSansObserver.load().then(() => {
+  document.body.classList.add('fontLoaded');
+});
+
 // Create redux store with history
 const initialState = {};
 const store = configureStore(initialState, history);
@@ -43,7 +57,9 @@ const render = messages => {
     <Provider store={store}>
       <LanguageProvider messages={messages}>
         <ConnectedRouter history={history}>
-          <App />
+          <ThemeProvider theme={theme}>
+            <App />
+          </ThemeProvider>
         </ConnectedRouter>
       </LanguageProvider>
     </Provider>,

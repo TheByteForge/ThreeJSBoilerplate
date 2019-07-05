@@ -8,11 +8,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', Helvetica, sans-serif;
   }
 
   body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', Helvetica, sans-serif;
   }
 
   #app {
@@ -20,10 +20,23 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
     min-width: 100%;
   }
+  
+  body::-webkit-scrollbar {
+    width: .25em;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: #161616;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #7f7e77;
+    outline: 1px solid slategrey;
+  }
 
   p,
   label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', Helvetica, sans-serif;
     line-height: 1.5em;
   }
 `;
