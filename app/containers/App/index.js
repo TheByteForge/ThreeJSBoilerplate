@@ -11,6 +11,8 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
+import AboutPage from 'containers/AboutPage/Loadable';
+import Carbon from 'containers/Carbon/Loadable';
 import StyleGuide from 'containers/StyleGuide/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
@@ -22,6 +24,8 @@ export default function App() {
     <AppWrapper>
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/About" component={AboutPage} />
+        <Route exact path="/Carbon" component={Carbon} />
         <Route exact path="/StyleGuide" component={StyleGuide} />
         <Route component={NotFoundPage} />
       </Switch>

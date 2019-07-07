@@ -1,16 +1,16 @@
 /*
- * StyleGuide Messages
+ * StyleGuidePage Messages
  *
- * This contains all the text for the StyleGuide container.
+ * This contains all the text for the StyleGuidePage container.
  */
 
 import { defineMessages } from 'react-intl';
 
-export const scope = 'app.containers.StyleGuide';
+export const scope = 'app.containers.StyleGuidePage';
 
 export default defineMessages({
   header: {
     id: `${scope}.header`,
-    defaultMessage: 'StyleGuide Container Component',
+    defaultMessage: 'StyleGuidePage Container Component',
   },
 });

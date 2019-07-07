@@ -1,6 +1,6 @@
 /**
  *
- * StyleGuide
+ * AboutPage
  * mouse cursor working links
  * https://codesandbox.io/s/j2x2ronqn9
  * https://codesandbox.io/s/mm05o04kl9
@@ -15,7 +15,10 @@ import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 import { compose } from 'redux';
+import ReactCursorPosition, { INTERACTIONS } from 'react-cursor-position';
 import styled from 'styled-components';
+import PositionLabel from './PositionLabel';
+import InstructionsLabel from './InstructionsLabel';
 
 import messages from './messages';
 
@@ -28,7 +31,7 @@ const Title = styled.h1`
   color: ${props => props.theme.colors.secondary};
 `;
 
-export class StyleGuide extends React.PureComponent {
+export class AboutPage extends React.PureComponent {
   render() {
     return (
       <PageContainer>
@@ -36,12 +39,24 @@ export class StyleGuide extends React.PureComponent {
           <FormattedMessage {...messages.header} />
         </Title>
         <Navigation />
+
+        <ReactCursorPosition
+          className="example__target"
+          activationInteractionMouse={INTERACTIONS.HOVER} // default
+          hoverDelayInMs={250} // default 0
+          hoverOffDelayInMs={150} // default 0
+        >
+          <PositionLabel />
+          <div className="example__instructions">
+            <InstructionsLabel />
+          </div>
+        </ReactCursorPosition>
       </PageContainer>
     );
   }
 }
 
-StyleGuide.propTypes = {
+AboutPage.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
@@ -59,4 +74,4 @@ const withConnect = connect(
 export default compose(
   withConnect,
   memo,
-)(StyleGuide);
+)(AboutPage);

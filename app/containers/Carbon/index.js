@@ -1,11 +1,7 @@
 /**
  *
- * StyleGuide
- * mouse cursor working links
- * https://codesandbox.io/s/j2x2ronqn9
- * https://codesandbox.io/s/mm05o04kl9
- * https://codepen.io/karlovidek/pen/yvxZjO
- * https://greensock.com/forums/topic/19789-follow-by-mouse/
+ * Carbon
+ *
  *
  */
 
@@ -22,13 +18,15 @@ import messages from './messages';
 import Navigation from '../../components/Navigation';
 import PageContainer from '../../components/PageContainer/PageContainer';
 
+import Hero from '../../components/Hero';
+
 const Title = styled.h1`
   font-family: 'IBM Plex Sans';
   font-weight: 300;
   color: ${props => props.theme.colors.secondary};
 `;
 
-export class StyleGuide extends React.PureComponent {
+export class Carbon extends React.PureComponent {
   render() {
     return (
       <PageContainer>
@@ -36,12 +34,13 @@ export class StyleGuide extends React.PureComponent {
           <FormattedMessage {...messages.header} />
         </Title>
         <Navigation />
+        <Hero />
       </PageContainer>
     );
   }
 }
 
-StyleGuide.propTypes = {
+Carbon.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
@@ -59,4 +58,4 @@ const withConnect = connect(
 export default compose(
   withConnect,
   memo,
-)(StyleGuide);
+)(Carbon);

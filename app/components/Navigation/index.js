@@ -18,6 +18,8 @@ function Navigation() {
     <StyledNavigation>
       {/* <FormattedMessage {...messages.header} /> */}
       <Button href="/">Home</Button>
+      <Button href="/About">About</Button>
+      <Button href="/Carbon">Carbon</Button>
       <Button href="/StyleGuide">Style Guide</Button>
     </StyledNavigation>
   );

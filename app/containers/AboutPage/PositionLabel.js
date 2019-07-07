@@ -14,19 +14,21 @@ const PositionLabel = props => {
   return (
     <div
       style={{
-        position: 'absolute',
-        height: '100%',
-        width: '100%',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        height: '100vh',
+        width: '100vw',
         background: 'skyblue',
       }}
     >
       <div
         style={{
           position: 'absolute',
-          left: x - 50,
-          top: y - 50,
-          width: 50,
-          height: 50,
+          left: x,
+          top: y,
+          width: 100,
+          height: 100,
           background: 'hotpink',
           borderRadius: '3rem',
         }}
