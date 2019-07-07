@@ -16,11 +16,18 @@ import messages from './messages';
 function Navigation() {
   return (
     <StyledNavigation>
-      {/* <FormattedMessage {...messages.header} /> */}
-      <Button href="/">Home</Button>
-      <Button href="/About">About</Button>
-      <Button href="/Carbon">Carbon</Button>
-      <Button href="/StyleGuide">Style Guide</Button>
+      <Button href="/">
+        <FormattedMessage {...messages.home} />
+      </Button>
+      <Button href="/About">
+        <FormattedMessage {...messages.about} />
+      </Button>
+      <Button href="/Carbon">
+        <FormattedMessage {...messages.carbon} />
+      </Button>
+      <Button href="/StyleGuide">
+        <FormattedMessage {...messages.styleguide} />
+      </Button>
     </StyledNavigation>
   );
 }

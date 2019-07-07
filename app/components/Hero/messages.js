@@ -9,8 +9,17 @@ import { defineMessages } from 'react-intl';
 export const scope = 'app.components.Hero';
 
 export default defineMessages({
-  header: {
-    id: `${scope}.header`,
-    defaultMessage: 'This is the Hero component!',
+  title: {
+    id: `${scope}.hero`,
+    defaultMessage: "The World's Leading Digital Manufacturing Platform",
+  },
+  subtitle: {
+    id: `${scope}.hero`,
+    defaultMessage:
+      'Carbon is reinventing the way polymeric products are designed, engineered, manufactured and delivered. Carbon is transforming protective gear for football and beyond.',
+  },
+  cta_button: {
+    id: `${scope}.hero`,
+    defaultMessage: 'Learn More',
   },
 });
