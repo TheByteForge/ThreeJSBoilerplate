@@ -8,6 +8,10 @@ const StyledNavigation = styled.div`
   flex-direction: row;
   width: 100%;
   z-index: 1000;
+
+  a {
+    width: 100%;
+  }
 `;
 
 export default StyledNavigation;

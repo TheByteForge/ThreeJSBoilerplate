@@ -3,7 +3,7 @@ import { css } from 'styled-components';
 const buttonStyles = css`
   display: inline-block;
   box-sizing: border-box;
-  padding: 1em 4em;
+  padding: 1.5rem 6rem;
   text-decoration: none;
   border-radius: 2px;
   -webkit-font-smoothing: antialiased;
@@ -11,11 +11,12 @@ const buttonStyles = css`
   user-select: none;
   cursor: pointer;
   outline: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: bold;
-  font-size: 16px;
-  border: 2px solid #41addd;
-  color: #41addd;
+  font-size: 1rem;
+  border: 1px solid rgba(101, 51, 255, 1);
+  background: rgba(101, 81, 255, 0.8);
+  color: #fff;
   transition: ease all 300ms;
 
   &:active {
