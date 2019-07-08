@@ -13,7 +13,6 @@ import { FormattedMessage } from 'react-intl';
 import { compose } from 'redux';
 import styled from 'styled-components';
 
-import Iframe from 'react-iframe';
 import messages from './messages';
 
 import Navigation from '../../components/Navigation';
@@ -57,15 +56,6 @@ export class Carbon extends React.PureComponent {
           title="Life @ Carbon"
           subtitle="Carbon is built on the premise that diversity — of perspectives and disciplines — accelerates innovation. We embody this as a business and as individuals. We strive to put our values to work daily through our interactions with each other and our customers."
           buttonVisible={false}
-        />
-        <Iframe
-          url="http://www.youtube.com/embed/xDMP3i36naA"
-          width="450px"
-          height="450px"
-          id="myId"
-          className="myClassname"
-          display="initial"
-          position="relative"
         />
       </PageContainer>
     );

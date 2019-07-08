@@ -17,6 +17,7 @@ import { FormattedMessage } from 'react-intl';
 import { compose } from 'redux';
 import styled from 'styled-components';
 
+import Iframe from 'react-iframe';
 import messages from './messages';
 
 import Navigation from '../../components/Navigation';
@@ -31,12 +32,22 @@ const Title = styled.h1`
 export class StyleGuide extends React.PureComponent {
   render() {
     return (
-      <PageContainer>
-        <Title>
-          <FormattedMessage {...messages.header} />
-        </Title>
-        <Navigation />
-      </PageContainer>
+      <React.Fragment>
+        <PageContainer>
+          <Title>
+            <FormattedMessage {...messages.header} />
+          </Title>
+          <Navigation />
+        </PageContainer>
+        <Iframe
+          url="https://www.carbondesignsystem.com/"
+          width="100%"
+          height="800px"
+          className="website"
+          display="initial"
+          position="relative"
+        />
+      </React.Fragment>
     );
   }
 }
