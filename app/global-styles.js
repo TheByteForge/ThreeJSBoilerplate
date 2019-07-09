@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: #fafafa;
     min-height: 100%;
     min-width: 100%;
+    background: ${props => props.theme.colors.secondary};
   }
   
   body::-webkit-scrollbar {

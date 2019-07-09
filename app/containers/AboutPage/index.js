@@ -29,6 +29,7 @@ const Title = styled.h1`
   font-family: 'IBM Plex Sans';
   font-weight: 300;
   color: ${props => props.theme.colors.secondary};
+  z-index: 1000;
 `;
 
 export class AboutPage extends React.PureComponent {
