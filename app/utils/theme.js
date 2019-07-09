@@ -19,6 +19,8 @@ export default {
     text: '#fff',
     price: '#aaaaaa',
     overlay: '#e5e8f1',
+    white: '#fff',
+    black: '#000',
   },
   fontSize: {
     xl: '3rem',
